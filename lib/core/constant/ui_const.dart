@@ -76,6 +76,11 @@ EdgeInsets paddingV8 = EdgeInsets.symmetric(vertical: eightPx);
 EdgeInsets paddingV10 = EdgeInsets.symmetric(vertical: tenPx);
 EdgeInsets paddingV12 = EdgeInsets.symmetric(vertical: twelvePx);
 EdgeInsets paddingV14 = EdgeInsets.symmetric(vertical: fourteenPx);
+EdgeInsets paddingV15 = EdgeInsets.symmetric(vertical: fifteenPx);
+EdgeInsets paddingV16 = EdgeInsets.symmetric(vertical: sixteenPx);
+
+EdgeInsets paddingHV166 =
+    EdgeInsets.symmetric(horizontal: sixteenPx, vertical: sixPx);
 
 BorderRadius radius3 = BorderRadius.circular(threePx);
 BorderRadius radius4 = BorderRadius.circular(fourPx);
@@ -84,6 +89,7 @@ BorderRadius radius6 = BorderRadius.circular(sixPx);
 BorderRadius radius8 = BorderRadius.circular(eightPx);
 BorderRadius radius10 = BorderRadius.circular(tenPx);
 BorderRadius radius12 = BorderRadius.circular(twelvePx);
+BorderRadius radius14 = BorderRadius.circular(fourteenPx);
 BorderRadius radius15 = BorderRadius.circular(fifteenPx);
 BorderRadius radius20 = BorderRadius.circular(twentyPx);
 BorderRadius radius36 = BorderRadius.circular(thirtySixPx);

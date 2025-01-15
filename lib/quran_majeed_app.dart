@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:notification_ui/core/common/pages/nav_bar_page.dart';
 import 'package:notification_ui/core/theme/app_theme.dart';
-import 'package:notification_ui/core/theme/notification_screen.dart';
-import 'package:notification_ui/features/Notification/presentation/pages/notification_page.dart';
+import 'package:notification_ui/core/theme/Notification_screen.dart';
 
 class QuranMajeedApp extends StatefulWidget {
   const QuranMajeedApp({super.key});
@@ -30,7 +30,7 @@ class _QuranMajeedState extends State<QuranMajeedApp> {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: AppTheme.light,
-        home: NotificationPage(),
+        home: NavBarPage(),
       ),
     );
   }

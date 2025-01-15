@@ -19,4 +19,14 @@ class AppColors {
   static const Color actionBorder = Color(0xFFF4EDE3);
   static const Color timeIcon = Color(0xFF8B7D6F);
   static const Color timeText = Color(0xFF655248);
+  static const Color navigationBarColor = Color(0xFFFDFAF3);
+  static const Color navigationBarSelectedColor = Color(0xFFF1E8DE);
+  static const Color navigationBarUnselectedColor = Color(0xFFF1E8DE);
+  static const Color navigationBarIconColor = Color(0xFF8B7D6F);
+  static const Color navigationBarIconSelectedColor = Color(0xFF8B7D6F);
+  static const Color navigationBarLabelColor = Color(0xFFA99B8D);
+  static const Color navigationBarLabelSelectedColor = Color(0xFF895737);
+  static const Color memorizationCardColor = Color(0xFFF4EDE3);
+  static const Color actionButtonColor = Color(0xFF895737);
+  static const Color memorizationCardProgressColor = Color(0xFF895737);
 }

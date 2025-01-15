@@ -45,7 +45,6 @@ class NotificationPage extends StatelessWidget {
             color: AppColors.titleText,
           ),
         ),
-        elevation: 0,
       ),
       body: Padding(
         padding: paddingTop12,
