@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:notification_ui/core/constant/app_colors.dart';
+import 'package:notification_ui/core/common/widgets/app_bar_widget.dart';
+
 import 'package:notification_ui/core/constant/app_images.dart';
 import 'package:notification_ui/core/constant/ui_const.dart';
 import 'package:notification_ui/core/theme/Notification_screen.dart';
@@ -34,28 +35,10 @@ class MemorizationPage extends StatelessWidget {
 
   /// Builds the AppBar with gradient background and actions.
   PreferredSizeWidget _buildAppBar() {
-    return AppBar(
-      flexibleSpace: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppColors.gradientStartColor,
-              AppColors.gradientEndColor,
-            ],
-          ),
-        ),
-      ),
-      titleSpacing: 16,
-      title: Text(
-        'Memorization',
-        style: TextStyle(
-          fontSize: eighteenPx,
-          fontWeight: FontWeight.w500,
-          color: AppColors.titleText,
-        ),
-      ),
+    return CustomAppBar(
+      title: 'Memorization',
+      showLeadingIcon: true,
+      onLeadingPressed: () {},
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
