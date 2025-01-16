@@ -17,41 +17,35 @@ class _TafsirPageState extends State<TafsirPage>
   late TabController _tabController;
   final List<Tab> _tabs = [
     Tab(
-      child: IntrinsicWidth(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text('En: Ibn Kathir'),
-            SizedBox(width: 8),
-            SvgPicture.asset(AppImages.icAddCircle),
-          ],
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text('En: Ibn Kathir'),
+          SizedBox(width: 8),
+          SvgPicture.asset(AppImages.icAddCircle),
+        ],
       ),
     ),
     Tab(
-      child: IntrinsicWidth(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Bn: Bayan Foundation2'),
-            SizedBox(width: 8),
-            SvgPicture.asset(AppImages.icCloseCircle),
-          ],
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Bn: Bayan Foundation2'),
+          SizedBox(width: 8),
+          SvgPicture.asset(AppImages.icCloseCircle),
+        ],
       ),
     ),
     Tab(
-      child: IntrinsicWidth(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Add More'),
-            SizedBox(width: 8),
-            SvgPicture.asset(AppImages.icAddCircle),
-          ],
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Add More'),
+          SizedBox(width: 8),
+          SvgPicture.asset(AppImages.icAddCircle),
+        ],
       ),
     ),
   ];
@@ -105,6 +99,8 @@ class _TafsirPageState extends State<TafsirPage>
                   controller: _tabController,
                   tabs: _tabs,
                   isScrollable: true,
+                  labelPadding: EdgeInsets.zero,
+                  tabAlignment: TabAlignment.start,
                   indicatorPadding: EdgeInsets.zero, // Add this line
                 ),
                 pinned: true,
