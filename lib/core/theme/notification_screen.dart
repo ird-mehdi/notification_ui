@@ -297,6 +297,13 @@ double get fourteenPx {
   return _fourteenPx!;
 }
 
+double? _thirteenPx;
+
+double get thirteenPx {
+  _thirteenPx ??= 13.px;
+  return _thirteenPx!;
+}
+
 double? _threePx;
 
 double get threePx {
@@ -539,13 +546,6 @@ double? _twentyFourPx;
 double get twentyFourPx {
   _twentyFourPx ??= 24.px;
   return _twentyFourPx!;
-}
-
-double? _thirteenPx;
-
-double get thirteenPx {
-  _thirteenPx ??= 13.px;
-  return _thirteenPx!;
 }
 
 double? _thirtyTwoPx;

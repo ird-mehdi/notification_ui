@@ -4,32 +4,32 @@ import 'package:notification_ui/core/constant/app_colors.dart';
 import 'package:notification_ui/core/constant/app_images.dart';
 import 'package:notification_ui/core/constant/ui_const.dart';
 import 'package:notification_ui/core/theme/notification_screen.dart';
-import 'package:notification_ui/features/tafsir/presentation/controller/tafsir_controller.dart';
 
 class CollapsibleContainer extends StatelessWidget {
+  final String icon;
   final String title;
-  final String arabicText;
+  final String? arabicText;
   final String translation;
-  final TafsirController controller;
+  final Color? textColor;
+  final Color? iconColor;
 
   const CollapsibleContainer({
     super.key,
+    required this.icon,
     required this.title,
-    required this.arabicText,
+    this.arabicText,
     required this.translation,
-    required this.controller,
+    this.textColor = Colors.black,
+    this.iconColor = AppColors.iconColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      tilePadding: EdgeInsets.zero,
-      collapsedBackgroundColor: Colors.transparent,
-      backgroundColor: Colors.transparent,
-      collapsedTextColor: Colors.transparent,
-      onExpansionChanged: (expanded) {
-        controller.toggleExpansion(expanded);
-      },
+      tilePadding: EdgeInsets.symmetric(horizontal: sixteenPx, vertical: 12),
+      collapsedBackgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.backgroundColor,
+      collapsedTextColor: AppColors.iconColor,
       title: Text(
         title,
         style: TextStyle(
@@ -39,7 +39,7 @@ class CollapsibleContainer extends StatelessWidget {
         ),
       ),
       leading: SvgPicture.asset(
-        AppImages.icStar,
+        icon,
         height: twentyFourPx,
         width: twentyFourPx,
         colorFilter: ColorFilter.mode(
@@ -68,37 +68,46 @@ class CollapsibleContainer extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                arabicText,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
+          child: arabicText != null
+              ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        arabicText!,
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                    gapH10,
+                    Text(
+                      "Sahih International",
+                      style: TextStyle(
+                        fontSize: tenPx,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.brown,
+                      ),
+                    ),
+                    gapH10,
+                    Text(
+                      translation,
+                      style: TextStyle(
+                        fontSize: thirteenPx,
+                        color: Colors.black87,
+                      ),
+                    ),
+                  ],
+                )
+              : Text(
+                  translation,
+                  style: TextStyle(
+                    fontSize: thirteenPx,
+                    color: Colors.black87,
+                  ),
                 ),
-                textAlign: TextAlign.right,
-              ),
-              SizedBox(height: 16),
-              Text(
-                "Sahih International",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.brown,
-                ),
-              ),
-              SizedBox(height: 8),
-              Text(
-                translation,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.black87,
-                ),
-              ),
-            ],
-          ),
         ),
       ],
     );
