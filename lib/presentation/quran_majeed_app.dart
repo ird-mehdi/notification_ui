@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:notification_ui/ai/hadith_detail.dart';
 import 'package:notification_ui/core/theme/app_theme.dart';
 import 'package:notification_ui/core/theme/Notification_screen.dart';
-import 'package:notification_ui/presentation/alhadis/ui/alhadis_home_page.dart';
 
 class QuranMajeedApp extends StatefulWidget {
   const QuranMajeedApp({super.key});
@@ -21,9 +21,9 @@ class _QuranMajeedState extends State<QuranMajeedApp> {
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent, // Make the status bar transparent
-        statusBarIconBrightness: Brightness.dark, // Light icons
-        statusBarBrightness: Brightness.light, // For iOS devices
+        statusBarColor: Color(0xFF118C6E), // Make the status bar transparent
+        //statusBarIconBrightness: Brightness.dark, // Light icons
+        //statusBarBrightness: Brightness.light, // For iOS devices
       ),
       child: GetMaterialApp(
         key: QuranMajeedApp._globalkey,
@@ -31,7 +31,7 @@ class _QuranMajeedState extends State<QuranMajeedApp> {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: AppTheme.light,
-        home: HadithHomePage(),
+        home: HadithDetailScreen(),
       ),
     );
   }
