@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:notification_ui/quran_majeed_app.dart';
+import 'package:notification_ui/presentation/quran_majeed_app.dart';
 
 /// Utility class for retrieving the screen dimensions of the device.
 ///

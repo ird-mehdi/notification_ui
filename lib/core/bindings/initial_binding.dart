@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:notification_ui/core/common/controller/nav_bar_controller.dart';
-import 'package:notification_ui/features/Notification/presentation/controllers/notification_controller.dart';
-import 'package:notification_ui/features/memorization/presentation/controller/memorization_controller.dart';
-import '../../features/Notification/data/datasources/local/notification_data_source_imp.dart';
-import '../../features/Notification/data/repositories/notification_repository_imp.dart';
-import '../../features/Notification/domain/usecases/get_notification.dart';
+import 'package:notification_ui/data/datasources/local/notification_data_source_imp.dart';
+import 'package:notification_ui/data/repositories/notification_repository_imp.dart';
+import 'package:notification_ui/presentation/main/presenter/nav_bar_controller.dart';
+import 'package:notification_ui/presentation/notification/presenter/notification_controller.dart';
+import 'package:notification_ui/presentation/memorization/presenter/memorization_controller.dart';
+import '../../domain/usecases/get_notification.dart';
 
 class InitialBinding {
   void dependencies() {
