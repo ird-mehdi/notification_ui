@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notification_ui/ai/widgets/bottomsheet_widget.dart';
 import 'package:notification_ui/ai/widgets/colleactionshet.dart';
+import 'package:notification_ui/ai/widgets/collection_bottom_sheet.dart';
 
 class SettingTapBar extends StatelessWidget {
   const SettingTapBar({
@@ -53,7 +54,7 @@ class SettingTapBar extends StatelessWidget {
                     //     return BottomSheetWidget();
                     //   },
                     // );
-                    CollectionBottomSheet.show(context);
+                    CollectionBottomSheet2.show(context);
                   },
                 ),
               )
