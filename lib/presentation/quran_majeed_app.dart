@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:notification_ui/ai/hadith_detail.dart';
+import 'package:notification_ui/ai/pages/alhadith_setting.dart';
+import 'package:notification_ui/ai/pages/collection_page.dart';
+import 'package:notification_ui/ai/pages/hadith_detail.dart';
 import 'package:notification_ui/core/theme/app_theme.dart';
 import 'package:notification_ui/core/theme/Notification_screen.dart';
 
@@ -31,7 +33,7 @@ class _QuranMajeedState extends State<QuranMajeedApp> {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: AppTheme.light,
-        home: HadithDetailScreen(),
+        home: CollectionScreen(),
       ),
     );
   }
