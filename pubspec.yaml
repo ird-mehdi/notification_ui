@@ -100,6 +100,7 @@ flutter:
           weight: 500
         - asset: assets/fonts/Poppins/Poppins-Bold.ttf
           weight: 700
+        - asset: assets/fonts/Poppins/kalpurush.ttf
 
 flutter_assets:
   assets_path:
